@@ -21,8 +21,9 @@ struct Student
 
 void Create(Student* p, const int N);
 void Print(Student* p, const int N);
-int MinAverage(Student* p, const int N, double MinAve);
+void MinAverage(Student* p, const int N, double& MinAve);
 void CountMarks(Student* p, const int N, int& countPhysics, int& countMathematics, int& countInformatics);
+
 
 int main()
 {
@@ -60,8 +61,8 @@ int main()
 			Print(p, N);
 			break;
 		case 3:
-			MinAve = MinAverage(p, N, MinAve);
-			cout << "Мінімальне середній бал: " << setprecision(2) << MinAve << endl;
+			MinAverage(p, N, MinAve);
+			cout << "Мінімальне середній бал: " << setprecision(2) << fixed << MinAve << endl;
 			break;
 		case 4:
 			CountMarks(p, N, countPhysics, countMathematics, countInformatics);
@@ -121,7 +122,7 @@ void Print(Student* p, const int N)
 	}
 }
 
-int MinAverage(Student* p, const int N, double MinAve)
+void MinAverage(Student* p, const int N, double& MinAve)
 {
 	int i = 0;
 	double average = (p[i].physics + p[i].mathematics + p[i].informatics) / 3.;
@@ -132,7 +133,6 @@ int MinAverage(Student* p, const int N, double MinAve)
 		if (MinAve > average)
 			MinAve = average;
 	}
-	return MinAve;
 }
 
 void CountMarks(Student* p, const int N, int& countPhysics, int& countMathematics, int& countInformatics)

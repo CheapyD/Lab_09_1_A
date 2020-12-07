@@ -1,3 +1,2 @@
 ﻿  Lab_09_1_A.cpp
-C:\Users\Angry\source\repos\Lab_09_1_A\Lab_09_1_A\Lab_09_1_A.cpp(135,9): warning C4244: return: преобразование "double" в "int", возможна потеря данных
   Lab_09_1_A.vcxproj -> C:\Users\Angry\source\repos\Lab_09_1_A\Debug\Lab_09_1_A.exe
